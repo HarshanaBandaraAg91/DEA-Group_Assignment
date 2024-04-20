@@ -46,7 +46,7 @@
         h2 {
             color: #333; /* Replace with the exact color */
         }
-        input[type="text"], input[type="password"] {
+        .textf{
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -80,12 +80,12 @@
         <%@include file = "navbar.html" %>
             
         <div class="container">
-            <form action="login" method="POST">
+            <form action="LoginServlet" method="POST">
                 
                 <h2>Log In</h2>
                 
-                <input type="text" placeholder="Email or mobile number">
-                <input type="password" placeholder="Password">
+                <input class="textf" type="text" placeholder="Email or mobile number">
+                <input class="textf"  type="password" placeholder="Password">
             
                 <div class="forgot-password">
                     <a href="#">forget password?</a>
