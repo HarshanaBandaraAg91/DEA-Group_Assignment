@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Navbar</title>
+    <style>/* Reset default styles for list */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 70px; /* Increased height */
+}
+
+/* Logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; 
+    margin-right: 10px;
+}
+
+/* Menu styles */
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin-right: 50px;
+}
+
+.menu li a {
+    font-family: sans-serif;
+    font-size: 14;
+    color: navy;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Icons styles */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-right: 15px;
+}
+
+.icons a img {
+    height: 25px;
+}
+
+/* Hamburger menu icon (you can use an SVG or an icon font) */
+.menu-icon {
+    display: none; /* Hide by default for larger screens */
+    width: 30px;
+    height: 3px; /* Adjusted size */
+    background-color: #333;
+    position: relative;
+    cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px; /* Adjusted size */
+    background-color: #333;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    top: 8px;
+}
+
+.search-bar {
+    border: 1px solid green;
+    border-radius: 0px;
+    padding: 10px 20px;
+    width: auto;
+  }
+  .search-icon {
+    border-radius: 50%;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    
+  }
+  
+  .search-icon img{
+   height: 25px;   
+  }
+/* Media Query for mobile devices */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Adjust padding for smaller screens */
+        height: auto; /* Allow height to adjust automatically */
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column; /* Stack menu items vertically */
+        position: absolute;
+        top: 70px; /* Adjust based on navbar height */
+        left: 0;
+        background-color: #ffffff;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.active {
+        display: flex; /* Display menu when active */
+    }
+
+    .menu li {
+        margin-right: 0;
+        margin-bottom: 10px; /* Add margin between menu items */
+    }
+
+    .menu-icon {
+        display: block; /* Display hamburger menu icon */
+    }
+}
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.jsp"><img src="img/logo.png" alt="Logo"></a>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div style="position: relative;">
+            <input type="text" class="search-bar">
+            <span class="search-icon"><img src="img/search-icon.png" alt="Search"></span>
+        </div>
+        <div class="icons">
+            <a href="#"><img src="img/cart-icon.png" alt="Cart"></a>
+            <a href="#"><img src="img/profile-icon.png"></a>            
+            <div class="menu-icon"></div>
+        </div>
+    </nav>
+</body>
+</html>
