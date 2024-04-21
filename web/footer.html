@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>Footer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    #footer-table {
+        width: 90%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    #footer-table td {
+        padding: 10px;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    /* Adjusted widths for columns */
+    .logoc {
+        width: 40%;
+        padding-left: 20px;
+    }
+
+    #support,
+    #links2,
+    #contact {
+        width: 20%;
+    }
+
+    #logo .limg {
+        width: 200px;
+    }
+
+    table td h3 {
+        color: navy;
+    }
+    
+    #logo p{
+        font: 14px Arial, sans-serif;
+        width: 80%;
+        color: gray;
+        line-height: 25px;
+    } 
+
+    table tr td .pimg {
+        width: 100px;
+        margin-right: 10px;
+        padding-left: 50px;
+    }
+
+    table tr td hr {
+        width: 40%;
+        border-color: navy;
+        border-top: 3px solid navy;
+        margin-left: 0;
+    }
+
+    @media screen and (max-width: 600px) {
+        #footer-table td {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    #support a,
+    #links2 a,
+    #contact a {
+        text-decoration: none;
+        color: gray;
+        transition: color 0.3s ease;
+        font-size: 17px;
+        font-family: sans-serif;
+    }
+
+    #support a:hover,
+    #links2 a:hover ,
+    #contact a:hover{
+        color: navy;
+    }
+    
+    #support a,
+    #links2 a,
+    #contact a {
+        display: inline;
+        position: relative;
+        overflow: hidden;
+    }
+    #support a:after,
+    #links2 a:after,
+    #contact a:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        width: 0;
+        bottom: -5px;
+        background: navy;
+        height: 4px;
+        transition-property: width;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+    }
+    #support a:hover:after,
+    #links2 a:hover:after,
+    #contact a:hover:after {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+
+    </style>
+    </head>
+    <body><br>
+    <hr>
+    <table id="footer-table">
+    <tr>
+        <td class="logoc" id="logo">
+            <img class="limg" src="img\logo.png" alt="NSBM SHOP Logo">
+            <p>The NSBM Shop brings wide array of gifts and souvenirs ranging from graduation gifts, 
+                sports equipment, NSBM branded clothing, customized gift solutions
+                such as mugs, photo frames, acrylic plaques and etc.</p>
+            <h3>Payments Accepted via
+            <img class="pimg" src="img\payment.png" alt="Payments"></h3>
+        </td>
+        <td id="support">
+            <h3>Support</h3>
+            <hr><br>
+            <a href="#">Privacy Policy</a><br><br>
+            <a href="#">Terms &amp Conditions</a> <br><br>
+            <a href="#">Help Center</a> <br><br>
+        </td>
+        <td id="links2">
+            <h3>Useful Links</h3>
+            <hr><br>
+            <a href="about.jsp">About</a> <br><br>
+            <a href="index.jsp">Shop</a> <br><br>
+            <a href="login.jsp">Sign in</a> <br><br>
+        </td>
+        <td id="contact">
+            <h3>Contact Us</h3>
+            <hr><br>
+            &#128205;&nbsp;<a>NSBM Green University Town</a> <br><br>
+            &#128231;&nbsp;<a href="mailto:inquiries@nsbm.ac.lk"> inquiries@nsbm.ac.lk </a> <br><br>
+            &#128222;&nbsp;<a href="tel:+94 11 544 5000">+94 11 544 5000</a> <br><br>
+        </td>
+    </tr>
+    </table>
+</body>
+</html>
