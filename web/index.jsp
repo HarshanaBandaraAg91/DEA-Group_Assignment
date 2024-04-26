@@ -14,5 +14,6 @@
     <body>
         <%@include file = "navbar.html" %>
         <h1>Hello World!</h1>
+        <%@include file = "footer.html" %>
     </body>
 </html>
