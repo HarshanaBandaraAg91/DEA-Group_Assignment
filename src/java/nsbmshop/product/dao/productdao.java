@@ -51,4 +51,57 @@ public class productdao {
          return products;
     }
     
+    
+    public List<Cart> getCartProducts(ArrayList<Cart> cartList){
+        List<Cart> products = new ArrayList<Cart>();
+        try{
+            if(cartList.size()>0){
+                for(Cart item:cartList){
+                    query = "select * from products where id=?";
+                    pst = this.con.prepareStatement(query);
+                    pst.setInt(1, item.getId());
+                    rs = pst.executeQuery();
+                    
+                    while(rs.next()){
+                        Cart row = new Cart();
+                        row.setId(rs.getInt("id"));
+                        row.setName(rs.getString("name"));
+                        row.setCategory(rs.getString("category"));
+                        row.setPrice(rs.getDouble("price")*item.getQuantity());
+                        row.setQuantity(item.getQuantity());
+                        products.add(row);
+                    }
+                }
+            }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+        return products;
+    }
+    
+    //Get Total price from the cart list
+    public double getTotalCartPrice(ArrayList<Cart> cartList){
+        double sum = 0;
+        
+        try{
+            if(cartList.size()>0){
+                for(Cart item:cartList){
+                    query = "select price from products where id=?";
+                    pst = this.con.prepareStatement(query);
+                    pst.setInt(1, item.getId());
+                    rs = pst.executeQuery();
+                    
+                    while(rs.next()){
+                        sum += rs.getDouble("price")*item.getQuantity();
+                    }
+                }
+            }
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return sum;
+    }
+    
 }

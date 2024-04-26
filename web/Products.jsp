@@ -24,6 +24,7 @@ List<shopproduct> products = pr.getAllshopproduct();
     <body>
         <div class="container">
             <div class="card-header my-3">All Products</div>
+             <a href="cart.jsp">Click Here</a>
             <div class="row">
                 <%
                     if(!products.isEmpty()){
@@ -36,7 +37,7 @@ List<shopproduct> products = pr.getAllshopproduct();
     <h6 class="price">Price:<%= p.getPrice() %></h6>
      <h6 class="category">Category:<%= p.getCategory() %></h6>
      <div class="mt-3 d-flex justify-content-between">
-         <a href="#" class="btn btn-primary">Add to cart</a>
+         <a href="AddToCartServlet?id=<%= p.getId() %>" class="btn btn-primary">Add to cart</a>
      </div>
     
   </div>

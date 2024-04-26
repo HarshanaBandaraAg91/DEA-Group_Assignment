@@ -17,7 +17,7 @@ public class proDo {
 	public static Connection getConnection() throws ClassNotFoundException, SQLException{
         if(connection == null){
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/nsbmShop","root","ASrt12@@");
+            connection=DriverManager.getConnection("jdbc:mysql://localhost:3307/newshop","root","");
             System.out.print("connected");
         }
         return connection;
