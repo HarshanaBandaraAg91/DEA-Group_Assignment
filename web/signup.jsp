@@ -91,7 +91,7 @@
                 <input class="textf"  type="password" placeholder="Confirm Password">
             
                             
-                <input type="submit" class="btn" value="Login" >
+                <input type="submit" class="btn" value="Sign Up" >
                 <div class="register">
                         Have an account? <a href="#">Log In</a>
                 </div>

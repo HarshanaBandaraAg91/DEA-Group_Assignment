@@ -93,7 +93,7 @@
             
                 <input type="submit" class="btn" value="Login" >
                 <div class="register">
-                        Don't have an account? <a href="#">Register</a>
+                        Don't have an account? <a href="signup.jsp">Register</a>
                 </div>
             </form>
         </div>
