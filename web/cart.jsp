@@ -95,26 +95,26 @@ if(cart_list != null){
                         if(cart_list != null){
                             for(Cart c:cartProduct){ %>
                                 <tr>
-                        <td>1</td>
-                        <td><%= c.getName() %></td>
-                        <td><%= c.getCategory()%></td>
-                        <td>Rs <%= dcf.format(c.getPrice()) %></td>   
+                        <td><%= p.getId() %></td>
+                        <td><%= p.getName() %></td>
+                        <td><%= p.getCategory()%></td>
+                        <td>Rs <%= dcf.format(p.getPrice()) %></td>   
                         <td>
                             <form method="post" action="" class="form-inline">
-                                <input type="hidden" name="id" value="<%= c.getId()%>" class="form-input" />
+                                <input type="hidden" name="id" value="<%= p.getId()%>" class="form-input" />
                                 <div class="form-group d-flex justify-content-between w-50">
-                                    <a class="btn btn-sm btn-decre " href="Quantity-inc-dec?action=dec&id=<%= c.getId() %> "><i class="fas fa-minus-square"></i></a>                                
+                                    <a class="btn btn-sm btn-decre " href="Quantity-inc-dec?action=dec&id=<%= p.getId() %> "><i class="fas fa-minus-square"></i></a>                                
                                    
-                                    <input type="text" name="quantity" class="form-control w-50" value="<%= c.getQuantity() %>" readonly="" />
+                                    <input type="text" name="quantity" class="form-control w-50" value="<%= p.getQuantity() %>" readonly="" />
                                                                      
-                                    <a class="btn btn-sm btn-incre" href="Quantity-inc-dec?action=inc&id=<%= c.getId() %> "><i class="fas fa-plus-square"></i></a>
+                                    <a class="btn btn-sm btn-incre" href="Quantity-inc-dec?action=inc&id=<%= p.getId() %> "><i class="fas fa-plus-square"></i></a>
                                 </div>
                                   <!-- Button -->
                                 <button type="submit" class="btn btn-primary btn-sm">Buy</button>
                             </form>
                         </td>
                         <td></td>
-                        <td><a class="btn btn-sm btn-danger" href="remove-from-cart?id=<%= c.getId()%>">Remove</a></td>
+                        <td><a class="btn btn-sm btn-danger" href="remove-from-cart?id=<%= p.getId()%>">Remove</a></td>
                     </tr>
                            <% }
                         }
