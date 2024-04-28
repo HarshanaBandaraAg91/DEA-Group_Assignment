@@ -16,7 +16,7 @@
         <h1 style="color:darkgreen;">Contact Us</h1>
         <p style="color:white;">Feel free to contact us if you have any question about this web application.</p> <!-- inline css is used in here -->
         </fieldset>
-        <h1>Hello I am Kavisha</h1>
+        
 
     </body>
 </html>
