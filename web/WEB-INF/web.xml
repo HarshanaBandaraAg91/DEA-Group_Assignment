@@ -12,6 +12,10 @@
         <servlet-name>RemoveFromCartServlet</servlet-name>
         <servlet-class>nsbmshop.servlet.RemoveFromCartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CardPayment</servlet-name>
+        <servlet-class>nsbmshop.Payment.CardPayment</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddToCartServlet</servlet-name>
         <url-pattern>/AddToCartServlet/*</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>RemoveFromCartServlet</servlet-name>
         <url-pattern>/remove-from-cart/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CardPayment</servlet-name>
+        <url-pattern>/CardPayment</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
