@@ -84,16 +84,16 @@
                 
                 <h2>Log In</h2>
                 
-                <input class="textf" type="text" placeholder="Email or mobile number">
-                <input class="textf"  type="password" placeholder="Password">
+                <input class="textf" type="text" placeholder="Email Address" name="username">
+                <input class="textf"  type="password" placeholder="Password" name="password">
             
                 <div class="forgot-password">
-                    <a href="#">forget password?</a>
+                    <a href="ABC1234.jsp">forget password?</a>
                 </div>
             
                 <input type="submit" class="btn" value="Login" >
                 <div class="register">
-                        Don't have an account? <a href="#">Register</a>
+                        Don't have an account? <a href="signup.jsp">Register</a>
                 </div>
             </form>
         </div>

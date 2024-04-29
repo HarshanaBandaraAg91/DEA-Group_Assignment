@@ -15,7 +15,7 @@ import jakarta.servlet.http.HttpSession;
  *
  * @author grhar
  */
-public class LoginServlet extends HttpServlet {
+public class LogoutServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,10 +34,10 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet LogoutServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet LogoutServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -55,10 +55,18 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-       
-    }
+        //processRequest(request, response);
+        
+        
     
+        HttpSession httpsession = request.getSession();
+        httpsession.removeAttribute("username");
+        httpsession.invalidate();
+          
+        
+        response.sendRedirect("login.jsp");  
+        
+    }
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -71,42 +79,17 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        
-    String username = request.getParameter("username");
-    String password = request.getParameter("password");
-
-    // Check if username and password match admin credentials
-    if ("admin@gmail.com".equals(username) && "admin".equals(password)) {
-        HttpSession httpSession = request.getSession();
-        httpSession.setAttribute("adminusername", username);
-
-        request.getRequestDispatcher("admin.jsp").forward(request, response);
-    } else {
-        // If not admin, check if it's a regular user
-        User n = new User();
-        if (n.check(username, password)) {
-            HttpSession httpSession = request.getSession();
-            httpSession.setAttribute("username", username);
-
-            request.getRequestDispatcher("Profile.jsp").forward(request, response);
-        } else {
-            // Provide feedback to the user that login failed
-            request.setAttribute("message", "Invalid username or password.");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
-        }
+        processRequest(request, response);
     }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
 }
-
-   
-        
-}
-
-        
-        
-        
-    
-
-   
-
-    
