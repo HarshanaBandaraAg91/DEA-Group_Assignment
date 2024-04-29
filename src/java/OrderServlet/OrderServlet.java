@@ -94,9 +94,12 @@ public class OrderServlet extends HttpServlet {
         
          String email=request.getParameter("em");
         out.println("email :"+email);
-    }
-
     
+    
+    
+    response.sendRedirect("PaymentPage.jsp");
+
+    }
 
     /**
      * Returns a short description of the servlet.
