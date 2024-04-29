@@ -4,12 +4,12 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<!DOCTYPE html>
 <html>
 <head>
     <title>Add Product</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <style>
         body {
             margin: 0;
@@ -18,7 +18,7 @@ and open the template in the editor.
             background-color: #f3f3f3; /* Set background color */
         }
         .hd {
-            font-family: ariel;
+            font-family: arial;
             text-align: center;
         }
         .productform {
@@ -30,11 +30,14 @@ and open the template in the editor.
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .lbl {
-            font-size: 18px;
-            font-family: ariel;
+            font-size: 16px;
+            font-family: arial;
             display: block;
             margin-bottom: 5px;
             color: #333;
+        }
+        .astrix{
+            color: red;
         }
         
         .tf, .lbl{
@@ -48,6 +51,21 @@ and open the template in the editor.
             border-radius: 4px;
             line-height: 1.5;
             box-sizing: border-box;
+        }
+        
+        .blue-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            transition: background-color 0.3s ease; 
+        }
+
+        .blue-button:hover {
+            background-color: darkblue; 
         }
         
         .sbtn {
@@ -81,28 +99,31 @@ and open the template in the editor.
             }
         }
     </style>
+    
 </head>
 <body>
     <div class="productform">
         <h1 class="hd">Add New Product</h1>
-        <form action="ProductServlet" method="post" enctype="multipart/form-data">
-            <label class="lbl" for="pname">Name:</label>
+        <form name="productform" action="ProductServlet" method="post" enctype="multipart/form-data">
+            <label class="lbl" for="pname">Name:<font class="astrix">*</font></label>
             <input class="tf" type="text" name="pname">
-            <label class="lbl" for="pcat">Category:</label>
+            <label class="lbl" for="pcat">Category:<font class="astrix">*</font></label>
             <select class="tf" name="pcat">
                 <option value="">Select</option>
                 <option value="sport items">Sport Items</option>
                 <option value="souvenirs">Souvenirs</option>
                 <option value="gifts">Gifts</option>
             </select><br>
-            <label class="lbl" for="pprice">Price:</label>
+            <label class="lbl" for="pprice">Price:<font class="astrix">*</font></label>
             <input class="tf" type="text" name="pprice">
-            <label class="lbl" for="imageFile">Choose Image:</label>
+            <label class="lbl" for="imageFile">Choose Image:<font class="astrix">*</font></label>
             <input class="tf" type="file" id="imageFile" name="imageFile">
-            <label class="lbl" for="pquan">Quantity:</label>
+            <label class="lbl" for="pquan">Quantity:<font class="astrix">*</font></label>
             <input class="tf" type="number" name="pquan" value="1" min="1">
-            <input class="sbtn" type="submit" value="Submit">
-            <input class="rbtn" type="reset" value="Cancel">
+            <input class="sbtn" type="submit" value="Submit" >
+            <input class="rbtn" type="reset" value="Reset">
+            <a href="admin.jsp"><input type="button" value="All Products" class="blue-button" /></a>
+            
         </form>
     </div>
 </body>

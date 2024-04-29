@@ -6,24 +6,24 @@
 package newpackage;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.InputStream;
 import javax.servlet.http.Part;
-import javax.servlet.annotation.MultipartConfig;
-
 
 /**
  *
- * @author hirun
+ * @author hasit
  */
-@WebServlet(name = "ProductServlet", urlPatterns = {"/ProductServlet"})
+@WebServlet(name = "UpdateServlet", urlPatterns = {"/UpdateServlet"})
 @MultipartConfig
-public class ProductServlet extends HttpServlet {
+public class UpdateServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,10 +42,10 @@ public class ProductServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ProductServlet</title>");            
+            out.println("<title>Servlet UpdateServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ProductServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet UpdateServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -77,20 +77,37 @@ public class ProductServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String name= request.getParameter("pname");
-        String cat= request.getParameter("pcat");
-        String price= request.getParameter("pprice");
-        InputStream imageStream;
-        Part filePart = request.getPart("imageFile");
-        imageStream = filePart.getInputStream();
-        int quan= Integer.parseInt(request.getParameter("pquan"));
+    
+        String pid = request.getParameter("pid");
+        String pquan = request.getParameter("pquan");
+    
+        int id = 0;
+        int quan = 0;
+    
+        if(pid != null && !pid.isEmpty()){
+            id = Integer.parseInt(pid);
+        }
+    
+        String name = request.getParameter("pname");
+        String cat = request.getParameter("pcat");
+        String price = request.getParameter("pprice");
+    
+        if(pquan != null && !pquan.isEmpty()){
+            quan = Integer.parseInt(pquan);
+        }
+        Part filePart = request.getPart("pimage");
+        InputStream imageStream = null;
+        if (filePart != null && filePart.getSize() > 0) {
+            imageStream = filePart.getInputStream();
+        }
+    
+        Product p = new Product();
+        p.updateProduct(id, name, cat, price, quan, imageStream);
         
-        Product p= new Product();
-        p.addProduct(name,cat,price,quan,imageStream);
-        
+        // Redirect user to admin.jsp
         response.sendRedirect("admin.jsp");
-        //processRequest(request, response);
     }
+    
 
     /**
      * Returns a short description of the servlet.

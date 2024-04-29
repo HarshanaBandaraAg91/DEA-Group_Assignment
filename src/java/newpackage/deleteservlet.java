@@ -7,23 +7,23 @@ package newpackage;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.InputStream;
-import javax.servlet.http.Part;
-import javax.servlet.annotation.MultipartConfig;
-
-
 /**
  *
- * @author hirun
+ * @author hasit
  */
-@WebServlet(name = "ProductServlet", urlPatterns = {"/ProductServlet"})
-@MultipartConfig
-public class ProductServlet extends HttpServlet {
+@WebServlet(name = "deleteservlet", urlPatterns = {"/deleteservlet"})
+public class deleteservlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,10 +42,10 @@ public class ProductServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ProductServlet</title>");            
+            out.println("<title>Servlet deleteservlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ProductServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet deleteservlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -63,7 +63,47 @@ public class ProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        int id = Integer.parseInt(request.getParameter("id"));
+        String driver="com.mysql.jdbc.Driver";
+        String url="jdbc:mysql://localhost:3306/product_test";
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, "root", "");
+
+            String query = "DELETE FROM product WHERE id=?";
+            pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, id);
+            
+            int rowsAffected = pstmt.executeUpdate();
+            
+            PrintWriter out = response.getWriter();
+            if (rowsAffected > 0) {
+                response.sendRedirect("admin.jsp");;
+            } else {
+                out.println("<html><body><h2>Error deleting product!</h2></body></html>");
+            }
+
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(deleteservlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
+        try {
+            if (pstmt != null)
+                pstmt.close();
+            if (conn != null) 
+                conn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(deleteservlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                
+            
+        //processRequest(request, response);
+                
+            
+        //processRequest(request, response);
     }
 
     /**
@@ -73,29 +113,6 @@ public class ProductServlet extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        String name= request.getParameter("pname");
-        String cat= request.getParameter("pcat");
-        String price= request.getParameter("pprice");
-        InputStream imageStream;
-        Part filePart = request.getPart("imageFile");
-        imageStream = filePart.getInputStream();
-        int quan= Integer.parseInt(request.getParameter("pquan"));
-        
-        Product p= new Product();
-        p.addProduct(name,cat,price,quan,imageStream);
-        
-        response.sendRedirect("admin.jsp");
-        //processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
      */
     @Override
     public String getServletInfo() {
