@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<%-- 
+    Document   : admin
+    Created on : Apr 28, 2024, 11:32:24 AM
+    Author     : hirun
+--%>
 <html>
 <head>
     <title>Add Product</title>
