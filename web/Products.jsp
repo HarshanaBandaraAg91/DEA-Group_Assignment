@@ -20,6 +20,25 @@ List<shopproduct> products = pr.getAllshopproduct();
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+   <style>
+    .btn  {
+        background-color:green;
+        color: white;
+        } 
+     .card-header {
+        text-align: center;  
+        font-size: 24px;
+        font-weight: bold; 
+        color:white ; 
+        background-color: green;
+    }
+    .price{
+        font-weight: bold; 
+    }
+    .card-title{
+         color:blue ;
+    }
+ </style>
     </head>
     <body>
         <div class="container">
@@ -29,25 +48,25 @@ List<shopproduct> products = pr.getAllshopproduct();
                 <%
                     if(!products.isEmpty()){
                     for(shopproduct p:products){%>
-                       <div class="col-md-3 my-3">
+             <div class="col-md-3 my-3">
                     <div class="card w-100" style="width: 18rem;">
-  <img class="card-img-top" src="Product-images/<%= p.getImage() %>" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"><%= p.getName() %></h5>
-    <h6 class="price">Price:<%= p.getPrice() %></h6>
-     <h6 class="category">Category:<%= p.getCategory() %></h6>
-     <div class="mt-3 d-flex justify-content-between">
-         <a href="AddToCartServlet?id=<%= p.getId() %>" class="btn btn-primary">Add to cart</a>
-     </div>
+                       <img class="card-img-top" src="Product-images/<%= p.getImage() %>" alt="Card image cap">
+                         <div class="card-body">
+                          <h5 class="card-title"><%= p.getName() %></h5>
+                          <h6 class="price">Price:<%= p.getPrice() %></h6>
+                          <h6 class="category">Category:<%= p.getCategory() %></h6>
+                              <div class="mt-3 d-flex justify-content-between">
+                                <a href="AddToCartServlet?id=<%= p.getId() %>" class="btn btn">Add to cart</a>
+                              </div>
     
-  </div>
-</div>
-                </div>
+                   </div>
+             </div>
+          </div>
                   <% }
                    }
               %>
-            </div>
-        </div>
+      </div>
+ </div>
 				 
          
         
