@@ -20,6 +20,10 @@
         <servlet-name>Payment</servlet-name>
         <servlet-class>nsbmshop.Payment.Payment</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>OrderPayment</servlet-name>
+        <servlet-class>nsbmshop.Payment.OrderPayment</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddToCartServlet</servlet-name>
         <url-pattern>/AddToCartServlet/*</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>Payment</servlet-name>
         <url-pattern>/Payment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderPayment</servlet-name>
+        <url-pattern>/OrderPayment</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -9,16 +9,16 @@ and open the template in the editor.
 */
 
 body{
-    background-color:darkred;
+    background-color:lightgrey;
 }
 
 form{
     width: 450px;
-            height: 250px;
-            background-color: rgba(235, 225, 225, 0.5) ;
-            margin: 200px auto;
-            padding: 20px;
-            border-radius: 10px;
+    height: 250px;
+    background-color:#ac3939 ;
+    margin: 200px auto;
+    padding: 20px;
+    border-radius: 10px;
             
            
             
@@ -44,33 +44,33 @@ td {
     
 }
 h1{
-     text-align:center;
-            width: 350px;
-            height: 50px;
-            font-size: 40px;
-            background-color: lightseagreen;
-            color: green;
-            border-radius: 20px;
-           
-            margin:  0 auto;
+    text-align:center;
+    width: 350px;
+    height: 50px;
+    font-size: 40px;
+    background-color: lightsteelblue;
+    color: green;
+    border-radius: 20px;
+    margin:  0 auto;
 }
+
+
 input[type="radio"]
 {
    color:blue;
 }
 input[type="submit"]
-{
-    color:lightseagreen;
- 
+{  background-color:#80d4ff;
+
 }
 input[value="Submit"]
 {
     color:darkgreen;
     font-weight: bold;
-     width: 70px;
-            height: 30px;
-           background-color: lightcyan;
-           border-radius: 10px;
+    width: 70px;
+    height: 30px;
+    background-color: lightcyan;
+    border-radius: 10px;
     
 }
 

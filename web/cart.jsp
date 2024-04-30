@@ -93,7 +93,7 @@ if(cart_list != null){
                 <tbody>
                     <%
                         if(cart_list != null){
-                            for(Cart c:cartProduct){ %>
+                            for(Cart p:cartProduct){ %>
                                 <tr>
                         <td><%= p.getId() %></td>
                         <td><%= p.getName() %></td>

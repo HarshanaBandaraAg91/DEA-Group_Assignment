@@ -14,6 +14,8 @@
         
     </head>
     <body>
+        
         <h1>OOPS! Choose Payment Method</h1>
+        
     </body>
 </html>

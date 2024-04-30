@@ -11,14 +11,36 @@ and open the template in the editor.
 body{
     background-color:lightgreen;
 }
+
+
 h1{
     height:80px;
     width:500px;
     background-color:darkgray;
     color:white;
-    margin:200px auto;
+    margin:100px auto;
     border-radius: 6px;
     text-align:center;
     padding:15px;
+    
+}
+
+h2{
+    text-align:center;
+    color:blue;
+}
+
+
+form{
+    height:300px;
+    width:300px;
+    background-color:white;
+    color:black;
+    margin: 30px auto;
+    border-radius: 4px;
+  font-weight: bold;
+    padding:15px;
+    
+    
     
 }

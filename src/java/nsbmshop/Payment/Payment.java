@@ -73,7 +73,7 @@ public class Payment extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String paymentMethod = request.getParameter("pmethod");
-
+      
         if(paymentMethod.equals("card")) {
             response.sendRedirect("CardPayment.jsp");
         } else if (paymentMethod.equals("cash")) {
@@ -81,6 +81,9 @@ public class Payment extends HttpServlet {
              response.sendRedirect("success-1.jsp");
             
         } 
+        
+         response.sendRedirect("OrderServlet.java");
+        
         
     }
 
