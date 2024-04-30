@@ -10,24 +10,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Card Payment</title>
-        <link href="CSS/styles1.css" rel="stylesheet" type="text/css"/>
+        <link href="CSS/style-2.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <form action="CardPayment" method="POST">
-            <h1>Card details</h1>
+            <h1>Card details</h1><br><br>
             
             <table>
                 <tr>
                     <td>Card Holder name: </td>
-                    <td><input type="text" name="chname" value=""></td>
+                    <td><input type="text" name="chname" value="" placeholder="Card Holder name"></td>
                 </tr>
                  <tr>
                     <td>ID Number: </td>
-                    <td><input type="text" name="idno" value=""></td>
+                    <td><input type="text" name="idno" value="" placeholder="ID Number"></td>
                 </tr>
                  <tr>
                     <td>Phone Number: </td>
-                    <td><input type="text" name="pno" value=""></td>
+                    <td><input type="text" name="pno" value="" placeholder="Phone No"></td>
                 </tr>
                 <tr>
                     <td>Card Name: </td>
@@ -44,8 +44,9 @@
                     <td><input type="password" name="cvv" value="" placeholder= "  . . ."></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" name="conform" value="Conform"></td>
-                     <td><input type="reset" name="clear" value="Clear"></td>
+                    <td></td>
+                    <td><input type="submit" name="conform" value="Conform">
+                  <input type="reset" name="clear" value="Clear"></td>
                 </tr>
             </table>
         </form>

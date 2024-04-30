@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package nsbmshop.Payment;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author HP
  */
-@WebServlet(urlPatterns = {"/Payment"})
 public class Payment extends HttpServlet {
 
     /**
@@ -71,23 +70,18 @@ public class Payment extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
         String paymentMethod = request.getParameter("pmethod");
 
-        if (paymentMethod.equals("card")) {
+        if(paymentMethod.equals("card")) {
             response.sendRedirect("CardPayment.jsp");
         } else if (paymentMethod.equals("cash")) {
-            out.println("<html><body>");
-            out.println("<h1>Thanks for choosing our service!</h1>");
-            out.println("</body></html>");
+           
+             response.sendRedirect("success-1.jsp");
+            
         } 
-        else{
-             out.println("<html><body>");
-            out.println("<h1>OOPS! Choose Payment Method</h1>");
-             out.println("</body></html>");
-        }
+        
     }
 
     /**

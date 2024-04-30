@@ -76,7 +76,7 @@ public class CardPayment extends HttpServlet {
        
        
         
-            out.println("<h1>Payment Successs!</h1>");
+           response.sendRedirect("success-3.jsp");
            
     }
 
