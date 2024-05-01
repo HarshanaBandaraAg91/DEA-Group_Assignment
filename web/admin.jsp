@@ -3,6 +3,7 @@
     Created on : Apr 28, 2024, 11:32:24 AM
     Author     : hasit
 --%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,7 +129,7 @@
     <div class="product-container">
         <h1 class="product-title">
             Products 
-            <a href="index.html"><button class="blue-button">ADD NEW PRODUCT</button></a>
+            <a href="addproducts.jsp"><button class="blue-button">ADD NEW PRODUCT</button></a>
         </h1>
         <table class="product-table">
             <thead>
@@ -143,14 +144,20 @@
             </thead>
             <tbody>
                 <% while(rs.next()){ 
-                int id = rs.getInt("id"); %>
+                    int id = rs.getInt("id");
+                    byte[] imgData = rs.getBytes("image");
+                    String encode = "";
+                    if (imgData != null) {
+                        encode = Base64.getEncoder().encodeToString(imgData);
+                    }
+                %>
                 <tr>
                     <td class="product-image">
                         <% 
-                            byte[] imgData = rs.getBytes("image");
-                            String encode = Base64.getEncoder().encodeToString(imgData);
+                            if (encode != null && !encode.isEmpty()) {
                         %>
                         <img src="data:image/jpeg;base64, <%=encode%>" alt="Product Image">
+                        <% } %>
                     </td>
                     <td><%= rs.getString("name") %></td>
                     <td><%= rs.getString("category") %></td>
@@ -159,7 +166,6 @@
                     <td class="action-buttons">
                         <a href="updateproducts.jsp?id=<%=id%>"><button class="sbtn" >UPDATE</button></a>
                         <a href="deleteservlet?id=<%=id%>"><button class="rbtn">DELETE</button></a>
-
                     </td>
                 </tr>
                 <% } %>
