@@ -24,6 +24,23 @@
         <servlet-name>OrderPayment</servlet-name>
         <servlet-class>nsbmshop.Payment.OrderPayment</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PayPal</servlet-name>
+        <servlet-class>nsbmshop.Payment.PayPal</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Order</servlet-name>
+        <servlet-class>OrderServlet.OrderServlet</servlet-class>
+    </servlet>
+<!--    <servlet>
+        <servlet-name>Orders</servlet-name>
+        <servlet-class>OrderServlet.Orders</servlet-class>
+    </servlet>-->
+<!--    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>OrderServlet.OrderServlet</servlet-class>
+    </servlet>-->
     <servlet-mapping>
         <servlet-name>AddToCartServlet</servlet-name>
         <url-pattern>/AddToCartServlet/*</url-pattern>
@@ -48,6 +65,27 @@
         <servlet-name>OrderPayment</servlet-name>
         <url-pattern>/OrderPayment</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PayPal</servlet-name>
+        <url-pattern>/PayPal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/OrderServlet</url-pattern>
+    </servlet-mapping>
+<!--    <servlet-mapping>
+        <servlet-name>Order</servlet-name>
+        <url-pattern>/Order</url-pattern>
+    </servlet-mapping>-->
+<!--    <servlet-mapping>
+        <servlet-name>Orders</servlet-name>
+        <url-pattern>/Orders</url-pattern>
+    </servlet-mapping>-->
+<!--    <servlet-mapping>
+        
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/OrderServlet</url-pattern>
+    </servlet-mapping>-->
     <session-config>
         <session-timeout>
             30

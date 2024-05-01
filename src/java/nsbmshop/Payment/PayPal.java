@@ -16,10 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author HP
  */
-public class Payment extends HttpServlet {
-
-    private String OrderServlet;
-    private Object paymentMethods;
+public class PayPal extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,10 +35,10 @@ public class Payment extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Payment</title>");            
+            out.println("<title>Servlet PayPal</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Payment at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet PayPal at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -71,29 +68,9 @@ public class Payment extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    @SuppressWarnings({"ObjectEqualsNull", "ConvertToStringSwitch"})
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-
-        String paymentMethod = request.getParameter("pmethod");
-       
-        if(paymentMethod.equals("card")) {
-            response.sendRedirect("CardPayment.jsp");
-          
-        }
-        else if (paymentMethod.equals("cash")) {
-           
-             response.sendRedirect("success-1.jsp");
-           
-              
-        } 
-       
-       
-        
-         
-        
-        
+        processRequest(request, response);
     }
 
     /**
