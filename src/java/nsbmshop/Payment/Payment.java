@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Payment extends HttpServlet {
 
     private String OrderServlet;
+    private Object paymentMethods;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -70,29 +71,24 @@ public class Payment extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
+    @SuppressWarnings({"ObjectEqualsNull", "ConvertToStringSwitch"})
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         PrintWriter out = response.getWriter();
 
         String paymentMethod = request.getParameter("pmethod");
-      
+       
         if(paymentMethod.equals("card")) {
             response.sendRedirect("CardPayment.jsp");
-              response.setContentType("text/html");
-        
-        out.println("<html><head><title>Display Data</title></head><body>");
-        out.println("<h1>Data received from FirstServlet:</h1>");
-        out.println("<p>" +OrderServlet + "</p>");
-        out.println("</body></html>");
-        } else if (paymentMethod.equals("cash")) {
+          
+        }
+        else if (paymentMethod.equals("cash")) {
            
              response.sendRedirect("success-1.jsp");
-             out.println("<html><head><title>Display Data</title></head><body>");
-        out.println("<h1>Data received from FirstServlet:</h1>");
-        out.println("<p>" +OrderServlet + "</p>");
-        out.println("</body></html>");
+           
               
         } 
+       
        
         
          

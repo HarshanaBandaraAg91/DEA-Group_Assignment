@@ -18,7 +18,7 @@ List<shopproduct> products = pr.getAllshopproduct();
     <head>
         
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>All Products</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
    <style>
     .btn  {
@@ -30,7 +30,7 @@ List<shopproduct> products = pr.getAllshopproduct();
         font-size: 24px;
         font-weight: bold; 
         color:white ; 
-        background-color: green;
+        background-color: whitesmoke;
     }
     .price{
         font-weight: bold; 
@@ -38,11 +38,23 @@ List<shopproduct> products = pr.getAllshopproduct();
     .card-title{
          color:blue ;
     }
+   .custom-img {
+        max-width: 10000px;
+        width: 100%;
+        height: 500px;
+    }
+    .image{
+         width: 252px;
+        height: 240px;
+    }
  </style>
     </head>
     <body>
+     <%@include file = "navbar.html" %>
+       <img src="img/shopB.jpg" class="img-fluid custom-img" alt="Responsive image">
+           <div class="card-header my-3">All Products</div>
         <div class="container">
-            <div class="card-header my-3">All Products</div>
+            
              <a href="cart.jsp">Click Here</a>
             <div class="row">
                 <%
@@ -50,7 +62,7 @@ List<shopproduct> products = pr.getAllshopproduct();
                     for(shopproduct p:products){%>
              <div class="col-md-3 my-3">
                     <div class="card w-100" style="width: 18rem;">
-                       <img class="card-img-top" src="Product-images/<%= p.getImage() %>" alt="Card image cap">
+                       <img class="card-img-top" src="Product-img/<%= p.getImage() %>" alt="Card image cap">
                          <div class="card-body">
                           <h5 class="card-title"><%= p.getName() %></h5>
                           <h6 class="price">Price:<%= p.getPrice() %></h6>
@@ -74,5 +86,6 @@ List<shopproduct> products = pr.getAllshopproduct();
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+        <%@include file = "footer.html" %>
     </body>
 </html>

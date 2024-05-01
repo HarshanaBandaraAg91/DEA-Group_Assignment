@@ -96,8 +96,7 @@ public class OrderServlet extends HttpServlet {
         out.println("email :"+email);
     
     
-    
-    response.sendRedirect("PaymentPage.jsp");
+   
 
     }
 

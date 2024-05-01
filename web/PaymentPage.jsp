@@ -21,7 +21,8 @@
                  <tr>
                     <td>Payment Method</td>
                     <td><input type="radio" name="pmethod" value="cash">COD
-                    <input type="radio" name="pmethod" value="card">Card</td>
+                    <input type="radio" name="pmethod" value="card">Card
+                    </td>
                 </tr>
                 
                 <tr><td></td><td>
