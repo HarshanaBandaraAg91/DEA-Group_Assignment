@@ -29,7 +29,7 @@
   <img src="NSBM.jpg" alt="NSBM Gift Shop" width="1500" height="600">
   <section class="about-us">
     <div class="about">
-      <!--<img src="girl.png" class="pic">-->
+      
       <div class="text">
         <h2>About Us</h2>
         <h5>NSBM <span>Gift Shop</span></h5>
