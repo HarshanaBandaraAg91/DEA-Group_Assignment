@@ -1,7 +1,8 @@
 <h1><font color="red">NSBM Shopping Website</font></h1>
 
 
-Welcome to our shop website repository! This project is a Java-based web application for an online shop.
+Welcome to our shopping website repository !!!
+This project is a Java-based web application for an online shop.
 It provides features for users to browse products, add them to their cart, and make purchases.
 <br><br>
 ![1714576161053](https://github.com/HarshanaBandaraAg91/DEA-Group_Assignment/assets/139755295/7b61bda1-6a05-4472-9c0d-394eab5f90d9)
