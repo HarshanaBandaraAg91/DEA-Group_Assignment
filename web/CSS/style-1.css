@@ -18,17 +18,27 @@ and open the template in the editor.
 */
 
 body{
-    background-color:lightgrey;
+     background-image: url('bg-1.jpg');
+    background-size: cover;
+    filter: blur(5px); 
 }
 
 form{
     width: 450px;
     height: 250px;
-    background-color:#ac3939 ;
+    background-color:#a69987 ;
     margin: 200px auto;
     padding: 20px;
     border-radius: 10px;
-            
+     position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: #fff; /* Replace with the exact background color */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            width: 300px;
+            text-align: center;       
            
             
             

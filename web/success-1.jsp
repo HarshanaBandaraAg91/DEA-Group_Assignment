@@ -8,6 +8,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            body{
+     background-image: url('bg-1.jpg');
+    background-size: cover;
+    
+}
+
+        </style>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cash Payment Success</title>
         <link href="CSS/suc-1.css" rel="stylesheet" type="text/css"/>

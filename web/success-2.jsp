@@ -11,7 +11,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Not - PaymentMethod</title>
         <link href="CSS/suc-2.css" rel="stylesheet" type="text/css"/>
-        
+        <style>
+                       body{
+     background-image: url('bg-3.jpg');
+    background-size: cover;
+   
+}
+
+        </style>
     </head>
     <body>
         
