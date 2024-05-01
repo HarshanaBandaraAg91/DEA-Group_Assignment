@@ -4,6 +4,15 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
+    Created on : Apr 30, 2024, 10:52:14 PM
+    Author     : HP
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
     Created on : Apr 29, 2024, 7:28:09 PM
     Author     : HP
 */
@@ -32,7 +41,8 @@ input[type="text"]
     border: 1px solid #ccc;
     border-radius: 4px;
     display: inline-block;
-    color:yellow;
+    color:black;
+    font-weight:bold;
 }
 
 td {
@@ -73,6 +83,7 @@ input[value="Submit"]
     border-radius: 10px;
     
 }
+
 
 
 

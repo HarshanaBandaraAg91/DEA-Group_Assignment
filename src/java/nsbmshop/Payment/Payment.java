@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Payment extends HttpServlet {
 
+    private String OrderServlet;
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -76,13 +78,24 @@ public class Payment extends HttpServlet {
       
         if(paymentMethod.equals("card")) {
             response.sendRedirect("CardPayment.jsp");
+              response.setContentType("text/html");
+        
+        out.println("<html><head><title>Display Data</title></head><body>");
+        out.println("<h1>Data received from FirstServlet:</h1>");
+        out.println("<p>" +OrderServlet + "</p>");
+        out.println("</body></html>");
         } else if (paymentMethod.equals("cash")) {
            
              response.sendRedirect("success-1.jsp");
-            
+             out.println("<html><head><title>Display Data</title></head><body>");
+        out.println("<h1>Data received from FirstServlet:</h1>");
+        out.println("<p>" +OrderServlet + "</p>");
+        out.println("</body></html>");
+              
         } 
+       
         
-         response.sendRedirect("OrderServlet.java");
+         
         
         
     }
