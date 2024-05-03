@@ -1,6 +1,6 @@
 <%-- 
     Document   : success-2
-    Created on : Apr 30, 2024, 1:02:40 AM
+    Created on : May 3, 2024, 9:12:06 PM
     Author     : HP
 --%>
 
@@ -9,13 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Not - PaymentMethod</title>
+        <title>Success-2 Page</title>
         <link href="CSS/suc-2.css" rel="stylesheet" type="text/css"/>
-        
     </head>
     <body>
-        
-        <h1>OOPS! Choose Payment Method</h1>
+       <h1>OOPS! Choose Payment Method</h1>
         
     </body>
 </html>

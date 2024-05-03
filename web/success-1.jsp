@@ -1,6 +1,6 @@
 <%-- 
     Document   : success-1
-    Created on : Apr 30, 2024, 12:34:16 AM
+    Created on : May 3, 2024, 9:11:05 PM
     Author     : HP
 --%>
 
@@ -9,12 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Cash Payment Success</title>
+        <title>Success-1 Page</title>
         <link href="CSS/suc-1.css" rel="stylesheet" type="text/css"/>
     </head>
-    
     <body>
-        
         <h1>Thanks for choosing our service!</h1>
 
          <form action="Payment" method="POST">
@@ -81,6 +79,5 @@
             </table>
         </form>
             
-    
     </body>
 </html>

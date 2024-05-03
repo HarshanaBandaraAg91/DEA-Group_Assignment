@@ -1,29 +1,7 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Apr 30, 2024, 10:04:14 PM
-    Author     : HP
-*/
-
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Apr 30, 2024, 12:50:13 AM
-    Author     : HP
-*/
-body{
-    background-color:lightpink;
-}
 h1{
     height:80px;
     width:500px;
-    background-color:darkslateblue;
+    background-color: #4CAF50;
     color:white;
     margin:100px auto;
     border-radius: 8px;
@@ -35,20 +13,31 @@ h1{
 
 h2{
     text-align:center;
-    color:blue;
+    color:darkgreen;
 }
 
 
 form{
     height:300px;
     width:300px;
-    background-color:white;
-    color:black;
     margin: 30px auto;
     border-radius: 4px;
     font-weight: bold;
     padding:15px;
+      background: #fff; /* Replace with the exact background color */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: 2px solid white;
+
     
     
     
-}
+}/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 3, 2024, 8:59:29 PM
+    Author     : HP
+*/
+

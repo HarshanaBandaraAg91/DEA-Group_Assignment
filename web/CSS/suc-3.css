@@ -4,30 +4,26 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Apr 30, 2024, 1:13:00 AM
+    Created on : May 3, 2024, 9:01:24 PM
     Author     : HP
 */
-
-body{
-    background-color:lightgreen;
-}
-
 
 h1{
     height:80px;
     width:500px;
-    background-color:darkgray;
+    background-color:darkgreen;
     color:white;
     margin:100px auto;
     border-radius: 6px;
     text-align:center;
     padding:15px;
+    font-weight:bold;
     
 }
 
 h2{
     text-align:center;
-    color:blue;
+    color:darkgreen;
 }
 
 
@@ -40,6 +36,10 @@ form{
     border-radius: 4px;
   font-weight: bold;
     padding:15px;
+      background: #fff; /* Replace with the exact background color */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: 2px solid white;
+
     
     
     

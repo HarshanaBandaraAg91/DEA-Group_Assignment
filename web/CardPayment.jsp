@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Card
-    Created on : Apr 28, 2024, 11:28:26 PM
+    Document   : CardPayment
+    Created on : May 3, 2024, 9:09:26 PM
     Author     : HP
 --%>
 
@@ -9,12 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Card Payment</title>
-        <link href="CSS/style-2.css" rel="stylesheet" type="text/css"/>
+        <title>Card Payment Page</title>
+        <link href="CSS/st-2.css" rel="stylesheet" type="text/css"/>
     </head>
-    
     <body>
-        
         <form action="CardPayment" method="POST">
             
             <h1>Card details</h1><br><br>
@@ -23,17 +21,17 @@
                 
                 <tr>
                     <td>Card Holder name: </td>
-                    <td><input type="text" name="chname" value="" placeholder="Card Holder name"></td>
+                    <td><input type="text" name="chname" value=""></td>
                 </tr>
                 
                  <tr>
                     <td>ID Number: </td>
-                    <td><input type="text" name="idno" value="" placeholder="ID Number"></td>
+                    <td><input type="text" name="idno" value=""></td>
                 </tr>
                 
                  <tr>
                     <td>Phone Number: </td>
-                    <td><input type="text" name="pno" value="" placeholder="Phone No"></td>
+                    <td><input type="text" name="pno" value="" ></td>
                 </tr>
                 
                 <tr>
@@ -61,6 +59,5 @@
                 
             </table>
         </form>
-        
     </body>
 </html>

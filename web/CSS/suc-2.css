@@ -4,30 +4,20 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Apr 30, 2024, 1:00:59 AM
+    Created on : May 3, 2024, 9:00:17 PM
     Author     : HP
 */
-body{
-    background-color:lightskyblue;
-}
+
 h1{
     height:80px;
     width:500px;
-    background-color:darkmagenta;
+    background-color:darkgreen;
     color:white;
     margin:200px auto;
     border-radius: 6px;
     text-align:center;
     padding:15px;
     
-}
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Apr 30, 2024, 1:06:14 AM
-    Author     : HP
-*/
 
+    
+}

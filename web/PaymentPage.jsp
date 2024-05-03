@@ -1,11 +1,16 @@
+<%-- 
+    Document   : PaymentPage
+    Created on : May 3, 2024, 9:08:42 PM
+    Author     : HP
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Payment Page</title>
-        <link href="CSS/style-1.css" rel="stylesheet" type="text/css"/>
-            
+        <link href="CSS/st-1.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <form action="Payment" method="POST">

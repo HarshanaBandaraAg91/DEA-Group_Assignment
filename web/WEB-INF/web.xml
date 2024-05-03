@@ -1,98 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>AddToCartServlet</servlet-name>
-        <servlet-class>nsbmshop.servlet.AddToCartServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>QuantityIncDecServlet</servlet-name>
-        <servlet-class>nsbmshop.servlet.QuantityIncDecServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>RemoveFromCartServlet</servlet-name>
-        <servlet-class>nsbmshop.servlet.RemoveFromCartServlet</servlet-class>
+        <servlet-name>Payment</servlet-name>
+        <servlet-class>nsbmshop.Payment.Payment</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CardPayment</servlet-name>
         <servlet-class>nsbmshop.Payment.CardPayment</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>Payment</servlet-name>
-        <servlet-class>nsbmshop.Payment.Payment</servlet-class>
-    </servlet>
-<!--    <servlet>
-        <servlet-name>OrderPayment</servlet-name>
-        <servlet-class>nsbmshop.Payment.OrderPayment</servlet-class>
-    </servlet>-->
-<!--    <servlet>
-        <servlet-name>PayPal</servlet-name>
-        <servlet-class>nsbmshop.Payment.PayPal</servlet-class>
-    </servlet>-->
-    <!--    <servlet>
-        <servlet-name>Order</servlet-name>
-        <servlet-class>OrderServlet.OrderServlet</servlet-class>
-    </servlet>-->
-    <!--    <servlet>
-        <servlet-name>Orders</servlet-name>
-        <servlet-class>OrderServlet.Orders</servlet-class>
-    </servlet>-->
-    <!--    <servlet>
-        <servlet-name>OrderServlet</servlet-name>
-        <servlet-class>OrderServlet.OrderServlet</servlet-class>
-    </servlet>-->
-<!--    <servlet>
-        <servlet-name>Order</servlet-name>
-        <servlet-class>OrderServlet.Order</servlet-class>
-    </servlet>-->
-    <servlet-mapping>
-        <servlet-name>AddToCartServlet</servlet-name>
-        <url-pattern>/AddToCartServlet/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>QuantityIncDecServlet</servlet-name>
-        <url-pattern>/Quantity-inc-dec/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>RemoveFromCartServlet</servlet-name>
-        <url-pattern>/remove-from-cart/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CardPayment</servlet-name>
-        <url-pattern>/CardPayment</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Payment</servlet-name>
         <url-pattern>/Payment</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-<!--        <servlet-name>OrderPayment</servlet-name>
-        <url-pattern>/OrderPayment</url-pattern>
-    </servlet-mapping>-->
-<!--    <servlet-mapping>
-        <servlet-name>PayPal</servlet-name>
-        <url-pattern>/PayPal</url-pattern>
-    </servlet-mapping>-->
-    <servlet-mapping>
-        <servlet-name>OrderServlet</servlet-name>
-        <url-pattern>/OrderServlet</url-pattern>
+        <servlet-name>CardPayment</servlet-name>
+        <url-pattern>/CardPayment</url-pattern>
     </servlet-mapping>
-    <!--    <servlet-mapping>
-        <servlet-name>Order</servlet-name>
-        <url-pattern>/Order</url-pattern>
-    </servlet-mapping>-->
-    <!--    <servlet-mapping>
-        <servlet-name>Orders</servlet-name>
-        <url-pattern>/Orders</url-pattern>
-    </servlet-mapping>-->
-    <!--    <servlet-mapping>
-        
-        <servlet-name>OrderServlet</servlet-name>
-        <url-pattern>/OrderServlet</url-pattern>
-    </servlet-mapping>-->
-<!--    <servlet-mapping>
-        <servlet-name>Order</servlet-name>
-        <url-pattern>/Order</url-pattern>
-    </servlet-mapping>-->
     <session-config>
         <session-timeout>
             30
