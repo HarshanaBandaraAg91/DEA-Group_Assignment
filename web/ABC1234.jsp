@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Password eka wath <br>mathaka thiya ganda <br>bari wesa keriya....<br>
-            ammat huka gnin</h1>
+        <h1>Password or username<br>
+        not valid</h1>
     </body>
 </html>

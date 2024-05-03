@@ -30,6 +30,11 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        
+        form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
         .profile-info {
             margin-bottom: 20px;
         }
@@ -52,11 +57,10 @@
 
          %>
 
-        <form action="LogoutServlet">
-            
-            <input type="submit" value="LogOut">
-            
-        </form>
+         
+          <%@include file = "navbar.html" %>
+         
+        
               
          <div class="container">
         <h1>User Profile</h1>
@@ -67,7 +71,19 @@
     <p><strong>Phone Number:</strong> ${sessionScope.m_number}</p>
     <!-- Add more user information here -->
     </div>
+    
+     <form action="LogoutServlet">
+            
+         <input type="submit" value="LogOut"><br<br>
+            <input type="submit" value="Start Shopping">
+            
+            
+            
+        </form>
     </div>
+    
+    
+     <%@include file = "footer.html" %>
         
     </body>
 </html>
