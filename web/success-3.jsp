@@ -11,6 +11,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Success-3 Page</title>
         <link href="CSS/suc-3.css" rel="stylesheet" type="text/css"/>
+        <style>
+                       body{
+     background-image: url('bg-2.jpg');
+    background-size: cover;
+   
+}
+
+        </style>
     </head>
     <body>
       <h1> Your Payment Success!</h1>

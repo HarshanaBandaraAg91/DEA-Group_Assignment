@@ -11,6 +11,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Success-2 Page</title>
         <link href="CSS/suc-2.css" rel="stylesheet" type="text/css"/>
+<<<<<<< HEAD
+=======
+        <style>
+                       body{
+     background-image: url('bg-3.jpg');
+    background-size: cover;
+   
+}
+
+        </style>
+>>>>>>> b5305e8788fd36695c559a8ef2191e2e43109a2f
     </head>
     <body>
        <h1>OOPS! Choose Payment Method</h1>
