@@ -28,6 +28,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         
+        
         .product-title {
             margin-top: 0;
             padding-bottom: 10px;
@@ -126,6 +127,10 @@
 %>
 </head>
 <body>
+    <%@include file = "adminmenu.jsp" %>
+    <%@include file = "navbar.html" %>
+    
+    
     <div class="product-container">
         <h1 class="product-title">
             Products 
@@ -165,13 +170,14 @@
                     <td><%= rs.getInt("quantity") %></td>
                     <td class="action-buttons">
                         <a href="updateproducts.jsp?id=<%=id%>"><button class="sbtn" >UPDATE</button></a>
-                        <a href="deleteservlet?id=<%=id%>"><button class="rbtn">DELETE</button></a>
+                        <a href="deleteservlet?id=<%=id%>" onclick="return confirm('Are you sure you want to delete this item?')"><button class="rbtn">DELETE</button></a>
                     </td>
                 </tr>
                 <% } %>
             </tbody>
         </table>
     </div>
+            <%@include file = "footer.html" %>
 </body>
 </html>
 

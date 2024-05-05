@@ -50,7 +50,7 @@
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid green; /* Replace with the exact border color */
+            border: 1px solid green; 
             box-sizing: border-box;
         }
         .btn {
