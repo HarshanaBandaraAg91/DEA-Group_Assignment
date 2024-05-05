@@ -19,7 +19,7 @@
             background-color: #f3f3f3; /* Set background color */
         }
         .hd {
-            font-family: ariel;
+            font-family: arial;
             text-align: center;
         }
         .productform {
@@ -32,7 +32,7 @@
         }
         .lbl {
             font-size: 18px;
-            font-family: ariel;
+            font-family: arial;
             display: block;
             margin-bottom: 5px;
             color: #333;
@@ -89,6 +89,8 @@
     <%@ page import="javax.sql.DataSource" %>
     <%@ page import="javax.naming.InitialContext" %>
     <%@ page import="javax.naming.NamingException" %>
+    
+    <%@include file = "navbar.html" %><br>
     
     <div class="productform">
         <h1 class="hd">Update Product</h1>
@@ -155,6 +157,7 @@
             }
         %>
     </div>
+    <footer><%@include file = "footer.html" %></footer>
 </body>
 </html>
 

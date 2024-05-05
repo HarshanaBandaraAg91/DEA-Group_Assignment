@@ -102,6 +102,8 @@
     
 </head>
 <body>
+    <%@include file = "adminmenu.jsp" %>
+    <%@include file = "navbar.html" %><br>
     <div class="productform">
         <h1 class="hd">Add New Product</h1>
         <form name="productform" action="ProductServlet" method="post" enctype="multipart/form-data">
