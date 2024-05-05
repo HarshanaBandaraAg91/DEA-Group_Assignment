@@ -24,9 +24,7 @@ and open the template in the editor.
         .productform {
             width: 40%;
             margin: auto;
-            background-color: #dce0de;
             padding: 20px;
-            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .lbl {
@@ -48,7 +46,6 @@ and open the template in the editor.
             padding: 8px;
             margin-bottom: 15px;
             border: 1px solid green;
-            border-radius: 4px;
             line-height: 1.5;
             box-sizing: border-box;
         }

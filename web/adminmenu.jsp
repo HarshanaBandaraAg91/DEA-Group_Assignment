@@ -16,11 +16,12 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            overflow: hidden;
         }
 
-        .container {
+        .menucontainer {
             display: flex;
-            height: 130vh;
+            height: 100vh;
         }
 
         .shrmenu {
@@ -63,6 +64,7 @@
         .cmain {
             flex: 1;
             padding: 20px;
+            overflow-y: auto;
         }
 
         .toggleMenu {
@@ -110,7 +112,7 @@
     </style>
 </head>
 <body>
-<div class="container">
+<div class="menucontainer">
     <input type="checkbox" id="new" style="display:none;">
     <nav class="shrmenu"><br><br><br><br><br><br>
         <ul><li><p class="welcome"> Welcome Admin! &#128522;</p></li>
