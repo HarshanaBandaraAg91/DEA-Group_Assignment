@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Password or username<br>
+        <h1>Password Reset method run here<br>
         not valid</h1>
     </body>
 </html>

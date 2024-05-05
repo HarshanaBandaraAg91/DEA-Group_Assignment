@@ -76,14 +76,15 @@ public class LoginServlet extends HttpServlet {
     String username = request.getParameter("username");
     String password = request.getParameter("password");
 
-    // Check if username and password match admin credentials
+    
+
     if ("admin@gmail.com".equals(username) && "admin".equals(password)) {
         HttpSession httpSession = request.getSession();
         httpSession.setAttribute("adminusername", username);
 
         request.getRequestDispatcher("admin.jsp").forward(request, response);
     } else {
-        // If not admin, check if it's a regular user
+        
         User n = new User();
         if (n.check(username, password)) {
             HttpSession httpSession = request.getSession();
@@ -91,7 +92,7 @@ public class LoginServlet extends HttpServlet {
 
             request.getRequestDispatcher("Profile.jsp").forward(request, response);
         } else {
-            // Provide feedback to the user that login failed
+            
             request.setAttribute("message", "Invalid username or password.");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }

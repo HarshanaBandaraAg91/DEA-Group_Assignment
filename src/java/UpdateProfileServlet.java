@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author grhar
  */
-public class SignupServlet extends HttpServlet {
+public class UpdateProfileServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,10 +33,10 @@ public class SignupServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet SignupServlet</title>");            
+            out.println("<title>Servlet UpdateProfileServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet SignupServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet UpdateProfileServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -67,30 +67,23 @@ public class SignupServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        //processRequest(request, response);
+        throws ServletException, IOException {
         
-        
-        
-        
-String EfirstName = request.getParameter("EfirstName");
-String ElastName = request.getParameter("ElastName");
-String Eemail = request.getParameter("Eemail");
-String Emobile = request.getParameter("Emobile");
-String Epassword = request.getParameter("Epassword");
+    String username = (String) request.getSession().getAttribute("username");
+    
+    String firstName = request.getParameter("firstName");
+    String lastName = request.getParameter("lastName");
+    String email = request.getParameter("email");
+    String mobile = request.getParameter("mobile");
 
+    User user = new User();
+    user.updateUser(username, firstName, lastName, email, mobile);
 
-        
-User m = new User();
+    response.sendRedirect("Profile.jsp");
+}
 
-m.addUser(EfirstName,ElastName,Eemail,Emobile,Epassword);
+    
 
-
-response.sendRedirect("login.jsp");  
-
-    }
-
-      
     /**
      * Returns a short description of the servlet.
      *

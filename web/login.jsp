@@ -14,18 +14,32 @@
     
     <style>
         
-        body, html {
+        body,html {
+           
             height: 100%;
             margin: 0;
-            font-family: Arial, sans-serif; /* Replace with the exact font */
+            font-family: Arial, sans-serif; 
         }
+        
+        .bg-image {
+        height: 100vh;
+        background-image: url('img/bg_img.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        filter: blur(5px);
+        opacity: 0.3;
+        
+    }
+        
         .container {
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             padding: 20px;
-            background: #fff; /* Replace with the exact background color */
+            border-radius: 10px;
+            background: #fff; 
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             width: 300px;
             text-align: center;
@@ -34,27 +48,33 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+       animation: fadeIn 1s ease;   
         }
+        
+        @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+    }
         .forgot-password {
             align-self: flex-end;
             margin-bottom: 10px;
         }
         .forgot-password a {
-            color: greenyellow; /* Replace with the exact link color */
+            color: greenyellow; 
             text-decoration: none;
         }
         h2 {
-            color: #333; /* Replace with the exact color */
+            color: #333; 
         }
         .textf{
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid green; /* Replace with the exact border color */
+            border: 1px solid green; 
             box-sizing: border-box;
         }
         .btn {
-            background-color: #4CAF50; /* Replace with the exact button color */
+            background-color: #4CAF50; 
             color: white;
             padding: 10px 20px;
             margin: 10px 0;
@@ -66,10 +86,10 @@
             opacity: 0.8;
         }
         .register {
-            color: #555; /* Replace with the exact color */
+            color: #555; 
         }
         .register a {
-            color: #007bff; /* Replace with the exact link color */
+            color: #007bff; 
             text-decoration: none;
         }
     </style>
@@ -77,8 +97,11 @@
     </head>
     
     <body>
+        
         <%@include file = "navbar.html" %>
-            
+        
+         
+        <div class="bg-image"></div>  
         <div class="container">
             <form action="LoginServlet" method="POST">
                 
@@ -97,6 +120,7 @@
                 </div>
             </form>
         </div>
+        
     </body>
     
 </html>

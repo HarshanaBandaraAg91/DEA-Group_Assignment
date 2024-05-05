@@ -1,10 +1,14 @@
-import java.sql.Connection;
+   import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.sql.ResultSet;
+   import java.sql.ResultSet;
+
+
+
+
 
 
 /*
@@ -50,6 +54,11 @@ public class User {
         }
     }
 
+    
+    
+    
+        
+
         
    
             public boolean check(String uname, String pass) {
@@ -71,33 +80,48 @@ public class User {
         }
     }
 
-    public String[] getUserInfo(String uname, String pass) {
-        try {
-            String query = "SELECT * FROM user WHERE e_address=? AND pass=?";
-            st = conn.prepareStatement(query);
-            st.setString(1, uname);
-            st.setString(2, pass);
-
-            try (ResultSet rs = st.executeQuery()) {
-                if (rs.next()) {
-                    String[] userInfo = {
-                            rs.getString("f_name"),
-                            rs.getString("l_name"),
-                            rs.getString("e_address")
-                            
-                    };
-                    return userInfo;
-                }
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null; // Return null if user is not found or an error occurs
-    }
-
+    
         
 
+     
    
+    
+    
+    
+    
+    public void updateUser(String username, String firstName, String lastName, String email, String mobile) {
+        try {
+            connectToDB();
+            String query = "UPDATE user SET f_name=?, l_name=?, e_address=?, m_number=? WHERE e_address=?";
+
+            st = conn.prepareStatement(query);
+            st.setString(1, firstName);
+            st.setString(2, lastName);
+            st.setString(3, email);
+            st.setString(4, mobile);
+            st.setString(5, username);
+            st.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     private void connectToDB() {
         String driver = "com.mysql.cj.jdbc.Driver";
@@ -110,6 +134,10 @@ public class User {
         }
         
         
+    }
+
+    private void closeResources() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
 
